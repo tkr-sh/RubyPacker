@@ -12,8 +12,10 @@ i = 0
 while i < code.length
     a = code[i].ord << 8
 
-    if code[i+1] != nil
+    if code[i+1]
         b = code[i+1].ord
+    else
+        b = 0
     end
 
     golfed_code += (a+b).chr(Encoding::UTF_8)
